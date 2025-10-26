@@ -1,0 +1,318 @@
+/* css navbar semua html */
+.font-rumahsakit {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1f2397;
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-pills .nav-link {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: #212529;
+  background-color: transparent;
+  border-radius: 0;
+  border-bottom: 3px solid transparent;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-bottom: 0.5rem;
+  margin: 0 0.5rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  font-weight: 700;
+  color: #0d6efd;
+  background-color: transparent;
+  border-bottom-color: #0d6efd;
+}
+
+.nav-pills .nav-link:not(.active):hover {
+  color: #0d6efd;
+  border-bottom-color: #0d6efd;
+}
+
+/* animasi untuk atas header */
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  width: fit-content;
+  
+  animation-name: marquee-scroll;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee-content span {
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.marquee-content .divider {
+  padding: 0 0.5rem;
+  opacity: 0.7;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* css untuk gambar slogan */
+.hero-container {
+  height: 60vh;
+  min-height: 450px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.pexels.com/photos/1692693/pexels-photo-1692693.jpeg?cs=srgb&dl=pexels-tomfisk-1692693.jpg&fm=jpg');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .hero-container h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* css buat berita */
+.news-section {
+  background-color: #f8f9fa;
+}
+
+.news-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-card-img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 225px;
+  object-fit: cover;
+}
+
+.news-card .card-title {
+  color: #222;
+}
+
+.news-read-more {
+  color: var(--rs-brand-color, #00796B);
+  transition: opacity 0.2s ease;
+}
+
+.news-read-more:hover {
+  opacity: 0.7;
+}
+
+.news-badge-jantung {
+  background-color: #fce8e6;
+  color: #c9372c;
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+}
+
+.news-badge-gayahidup {
+  background-color: #e6f7ff;
+  color: #0d6efd;
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+}
+
+.news-badge-gizi {
+  background-color: #e6f7f0;
+  color: #0a6840;
+  font-weight: 500;
+  padding: 0.4em 0.8em;
+}
+
+/* css untuk hitung jantung */
+:root {
+  --brand-primary: #3b4de7;
+  --brand-dark: #2a37a1;
+  --brand-light: #eef0fe;
+  --brand-light-gray: #f4f5f9;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.calculator-section {
+  background-color: var(--brand-light-gray);
+}
+
+.calculator-form-card {
+  background-color: var(--brand-primary);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 1rem 3rem rgba(59, 77, 231, 0.2);
+}
+
+.calculator-form-card .form-label {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.75rem;
+}
+
+.form-control,
+.form-select,
+.input-group-text {
+  background-color: var(--brand-dark);
+  color: white;
+  border: 1px solid var(--brand-dark);
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-toggle {
+  background-color: var(--brand-dark);
+  color: white;
+  border: 1px solid var(--brand-dark);
+  padding: 0.8rem 1rem;
+  font-weight: 500;
+}
+
+.btn-check:checked+.btn-toggle {
+  background-color: white;
+  color: var(--brand-primary);
+  border-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+}
+
+.btn-submit {
+  background-color: var(--brand-light);
+  color: var(--brand-primary);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.modal-content {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.modal-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-icon-wrapper .bi {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.modal-result-percent {
+  font-weight: 700;
+}
+
+.modal-result-description b {
+  font-weight: 600;
+}
+
+.risk-low {
+  color: #198754;
+}
+.risk-medium {
+  color: #ffc107;
+}
+.risk-high {
+  color: #dc3545;
+}
+
+.icon-low {
+  background-color: #198754;
+}
+.icon-medium {
+  background-color: #ffc107;
+}
+.icon-high {
+  background-color: #dc3545;
+}
+
+/* css footer */
+.hover-opacity-75:hover {
+  opacity: 0.75;
+}
+
+/* css layanan unggulan */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.feature .feature-icon {
+  animation-name: float;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.feature:nth-child(2) .feature-icon {
+  animation-delay: 0.5s;
+}
+
+.feature:nth-child(3) .feature-icon {
+  animation-delay: 1s;
+}
